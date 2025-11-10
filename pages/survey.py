@@ -3,168 +3,171 @@ import pandas as pd
 import numpy as np
 
 options_for_pairwise = [[
-    "Çalışan Refahı",
-    "Adil Maaş ve Yan Haklar",
-    "Mesleki Gelişim ve Destek",
-    "Uygun Fiyatlılık ve Adil Fiyatlandırma"
+    "Çalışan Refahı ve Çalışma Koşulları",
+    "Ürün Kalitesi ve Tüketici Değeri",
+    "Kaynak Yönetimi ve Üretim Verimliliği",
+    "Etik Yönetişim ve İş Ahlakı"
 ],
 [
-    "Fırsat Eşitliği ve İstihtamın Desteklenmesi",
-    "Sendikal Haklar ve Örgütlenme Özgürlüğü",
-    "STK ile İş Birliği",
-    "Projelerin Toplumla İletişimi"
+    "Sosyal Adalet ve Kapsayıcılık",
+    "Döngüsel Ekonomi ve Tüketim Karşıtlığı",
+    "Emek ve Sendika Haklarına Saygı",
+    "Kamu İmajı ve Sosyal İletişim"
 ],
 [
-    "İş Sağlığı ve Güvenliği",
-    "Ürünlerin Kalitesi ve Standartlara Uygunluğu",
-    "Bağımsız Denetim ve Raporlama",
-    "Kaynakların Verimli Kullanımı ve Yenilikçi Teknolojilere Yatırım"
+    "İş Sağlığı ve Güvenliği Uyumu",
+    "Çevresel Uyum ve Kirlilik Kontrolü",
+    "Ürün Standartları ve Sertifikalar",
+    "Şeffaflık, Denetim ve Raporlama"
 ],
 [
-    "Tüketici Eğitimi ve Farkındalığı",
-    "Toplumu ve Çalışanları Biliçlendirme Etkinlikleri",
-    "Yerel Ekonomik Destek ve Tedarik Zinciri Sorumlulğu",
-    "Paydaş Katılımının Sağlanması"
+    "Yerel Toplum ve Ekonomik Ortaklık",
+    "Paydaş Diyaloğu ve Geri Bildirim Mekanizmaları",
+    "Yenilik ve Kalkınma İçin Ortaklıklar",
+    "Tüketici ve Kamu Katılımı"
 ],
 [
-    "Çömertlik ve İyilikseverlik",
-    "Toplumsal Talebi Gerçekleştirme",
-    "Kurallara ve Standartlara Uygunluk",
-    "Paydaşlarla Birlikte Karar Alma"
+    "Operasyonel Bütünlük",
+    "Toplumla Uyumluluk",
+    "Mevzuata Uygunluk",
+    "Paydaşlarla İş Birliği"
 ]
 ]
 
 options_explanations = [
 [
     [
-        "Çalışanların yaşam standartlarını iyileştirmek için projeler oluşturulmalı.",
-        "Şirketler, işçilerin haklarını, sağlığını ve güvenliğini ön planda tutmalı.",
-        "Çalışanlar için aile dostu izin politikaları uygulanmalı.",
-        "Çalışanlar için yemek ve dinlenme alanları sağlanmalı."
+        "Tekstil sektörünün çalışma olanaklarını cazip hale getirmesi gerekir. Tıpkı otomotiv sektöründe olduğu gibi, insanların orada çalışma isteği duyması sağlanmalı",
+        "İşçilerin çocukları için kreş ve gündüz bakım evi gibi sosyal imkanlar, özellikle kadın çalışanların aidiyet hissini arttırır",
+        "Şirkette çalışanların akıl ve ruh sağlığını geliştirmeleri ve korumaları için çeşitli etkinlikler düzenlenmeli, şirkette aile ortamı oluşturulmalıdır. Çalışanlarına değerli bir vatandaş olduğunu hissettirmelidir",
+        "Adil çalışma ortamı sağlama: adil ücret ve makul çalışma saatleri"
     ],
     [
-        "Enflasyonla mücadele için çalışanlara destek sağlanmalı.",
-        "Fazla mesai ödemelerinin garantisi verilmeli ve ihbar - tazminat hakları güçlendirilmeli.",
-        "Çalışanlar için uzun vadeli sağlık ve emeklilik planları yapılmalı.",
-        "Çalışanlar için ödüllendirme ve teşvik programları oluşturulmalı."
+        "Kaliteli malzemeler kullanılarak tekstil ürünlerinin kullanım ömürleri göz önünde bulundurulmalı. Yıkama sonrası deforme olan ürünler müşterileri mağdur etmemeli",
+        "Kullanılan malzemeler hayvansal kaynaklı olmamalı, onlara eşdeğer alternatifler kullanılmalıdır",
+        "Reklamlara ayrılan bütçeler azaltılmalı, onun yerine kaliteye yatırılmalıdır",
+        "Müşterilere ilişkin ise kaliteli ürünler üretilmesi, fiyat-değer oranının makul olması ve dayanıklı ürünler üretilmesi firmaların ana sorumlulukları olmalıdır"
     ],
     [
-        "Çalışanlar için psikolojik destek hizmetleri sunulmalı.",
-        "Çalışanlar için eğitim programları ile iş gücü kalitesi artırılmalı.",
-        "Çalışanlar için mesleki gelişim fırsatları artırılmalı.",
-        "Yöneticilere liderlik ve yönetim becerilerini geliştirecek eğitimler verilmeli."
+        "Ürünün satış kanalları da doğaya saygılı ve insana uyumlu olmalıdır. Mağazalar tasarruflu ve özenle tasarlanmalı, online satışlarda ise kutu ve paketlemede geri dönüştürülmüş ürünler tercih edilmelidir",
+        "Bölgedeki su kıtlığı riskine karşı, yağmur suyu hasadı gibi yenilikçi su tasarrufu projeleri geliştirmeli",
+        "Tekstil üretiminin her aşamasında yapay zekadan faydalanılmalıdır. Teknoloji yardımı ile insan yükü ve doğa yükü azaltılmalıdır",
+        "Geri dönüşüm, su ve enerji tüketimini azaltacak üretim teknolojilerine yatırım yapılmalı"
     ],
     [
-        "Fiyatlar, kaliteyle uyumlu olmalı.",
-        "Fiyat artışlarının sebepleri şeffaf bir şekilde açıklanmalı.",
-        "Ürün fiyatları, düşük gelirli ailelerin alabileceği seviyede tutulmalı.",
-        "Fiyat artışlarına karşı esnek ödeme planları sunulmalı."
+        "Fiyatları arttırıp sonra 'indirim' diye düşürme taktiğine artık kimse inanmıyor. Gerçek kampanyalar yapılmalı",
+        "Dürüstlük ve etik uygulamaları korumak (yani, bir tasarımı kopyaladığınızda, orijinal tasarımcıya kredi/tazminat verilmesi gerekir).",
+        "Şirket içinde yükselme, torpil yoluyla değil, çalışanların bireysel liyakatlerine göre olmalıdır",
+        "Pazarlama, ürünü doğru bir şekilde yansıtmalıdır. Gerçeğe aykırı veya yanıltıcı iddialarda bulunulmamalıdır"
     ]
 ],
 [
     [
-        "Çalışanlar için eşit fırsatlar sağlanmalı.",
-        "Cinsiyet, yaş veya köken gibi faktörlere dayalı ayrımcılık yapılmamalı.",
-        "Şirket içi kadın hakları farkındalık projeleri uygulanmalı.",
-        "Şirket, yerel halkı daha fazla istihdam etmeli."
+        "Gerçekçi olmayan güzellik standartlarını değil, gerçek insanları temsil eden beden olumlamasını, çeşitliliği ve kapsayıcılığı teşvik edilmeli",
+        "Ayrımcılık veya engellilik durumu ayrımı yapılmadan çalışanlar adil ücret alma hakkına sahip olmalı, iş yerinde eşitlik olmalı",
+        "Hamilelik, ebeveynlik veya aile durumları nedeniyle hak kaybı yaşanmamalı",
+        "Kadınları ve fırsat eşitliğini desteklemek"
     ],
     [
-        "Sendikal haklara saygı gösterilmeli (toplu sözleşme, grev, lokavt).",
-        "Örgütlenme hakkını kullanan işçilere ayrımcılık uygulanması önlenmeli.",
-        "Sendikal faaliyetlere katılan işçilerin işten çıkarılması engellenmeli.",
-        "Sendika ile şirket arasında açık iletişim olmalı."
+        "Yüksek kalitede, tamir edilebilen, klasik tarzda ürünler üretilmeli; bu şekilde ürünler 'hızlı moda'dan etkilenmez",
+        "Müşterilerin eski kıyafetlerini göndermeleri halinde ödül programı uygulanabilir - yeni ürünlerde indirim gibi",
+        "Geri dönüştürülmüş malzemelerden ürünler yapmak için üretim merkezinde ayrı bir birim daha kurmalı",
+        "Geri dönüşüme önem vererek üretim yapılmalıdır"
     ],
     [
-        "Şirketin topluma katkı sağlamak için gönüllü projelere katılması sağlanmalı.",
-        "Çalışanlar, topluma duyarlı projelerde yer almalı.",
-        "Şirket, sosyal sorumluluk projelerinde yerel STK'larla işbirliği yapmalı.",
-        "Şirket, toplumun farklı ihtiyaçlarına yönelik projeler başlatmalı."
+        "İşçi gücünü temsil etmek için sendikalar teşvik edilmeli",
+        "Çalışan haklarında yasalara uymak, sendikal örgütlenmeye izin vermek ve kurumsal bir kültür oluşturmak esas bir sorumluluk olmalıdır",
+        "İSG görevlileri, sendikalar, hastalık izinleri gibi uygulamalar hayata geçirilmeli ve AB standartlarına uygun şekilde düzenlenmeli",
+        "Üreticiler çalışanlarının yasal ve insani haklarını gözetmelidir. Fazla kar amacı ile zor şartlarda insanlar çalıştırılmamalıdır"
     ],
     [
-        "Şirketin sosyal sorumluluk projelerinin tanıtımı yapılmalı.",
-        "Etik üretim süreçleri topluma duyurulmalı.",
-        "Şirketin başarıları hakkında kamuoyuna bilgilendirme yapılmalı.",
-        "Şirketin etik ve toplumsal sorumluluklarına dair düzenli olarak halkla ilişkiler çalışmaları yapılmalı."
-    ],
-],
-[
-    [
-        "Yüksek standartlarda iş güvenliği uygulamaları yapılmalı.",
-        "Çalışma koşullarında uluslararası standartlara uyum sağlanmalı.",
-        "Tehlikeli kimyasallar ve maddelerle ilgili düzenlemeler artırılmalı.",
-        "Çalışanların fiziksel ve ruhsal sağlığını desteklemek için hizmetler sağlanmalı."
-    ],
-    [
-        "Ürünlerin kalitesinde süreklilik sağlanmalı, markalar güven oluşturmalı.",
-        "Kumaşlar uzun ömürlü ve dayanıklı olmalı, geri dönüşümü sağlanmalı.",
-        "Çevre dostu paketleme olmalı, ambalaj atıkları minimize edilmeli.",
-        "Şirketler, ürünlerinin etiketlerinde çevresel etkileri açıklamalı."
-    ],
-    [
-        "Şirketin katkıları düzenli olarak raporlanmalı ve toplumla paylaşılmalı.",
-        "Tedarikçilerin etik uygunluğunun kontrolünü yapmalı.",
-        "Şirket denetimler ve raporlamalarla şeffaflık sağlamalı.",
-        "Çevresel etkileri düzenli olarak kontrol etmeli."
-    ],
-    [
-        "Şirket, çevreyi kirleten atıklar için geri dönüşüm programları oluşturmalı.",
-        "Sürdürülebilir teknoloji geliştirme süreçlerine yatırım yapılmalı.",
-        "Üretim süreçlerinde enerji verimliliği artırılmalı.",
-        "Çevre dostu kimyasal alternatiflerin kullanımı sağlanmalı."
+        "Tekstil üreticileri toplumdaki negatif izlenimi değiştirmelidir. Bu da doğaya olan sorumluluklarla başlayacaktır. Yakın gelecekte ciddi düzenlemeler yapılmalıdır",
+        "Toplumsal ve çevreye karşı duyarlılığın bir pazarlama aracı olarak kullanılmaması gerekir",
+        "Yerelliğin bir ayrıcalık göstergesi olarak algılanmasını sağlayacak reklam kampanyaları yapılmalı. O ürünü veya markayı kullanmayacağı bariz olan kişilerin reklam yüzü olmasından kaçınılmalı",
+        "Sosyal sorumluluk projelerinde tekstil şirketleri ön plana çıkmalı (örneğin Çocuk Esirgeme Kurumu'na giyecek yardımı vb.)"
     ],
 ],
 [
     [
-        "Tüketiciler, geri dönüşüm hakkında bilgilendirilmeli.",
-        "Fiyat artışlarının altındaki sebepler şeffaf bir şekilde açıklanmalı.",
-        "Ürünlerin etiketlerinde üretim süreci hakkında bilgi vermeli.",
-        "Şirketler, çevre bilincini artırmak için kampanyalar yapmalı."
+        "İş sağlığı öncelikli olmalı, vicdan ve kalite dengesi ile izlenebilirlik sağlanmalıdır",
+        "Herhangi bir çalışan sayısı kriteri olmaksızın iş yeri hekimi çalıştırmak",
+        "İş sağlığı ve güvenliği kapsamında düzenli, proaktif risk değerlendirmeleri yapmalı",
+        "İşçilere düzenli olarak iş güvenliği eğitimi verilmeli, güvenlikleri için gerekli ekipmanlar temin edilmelidir"
     ],
     [
-        "Şirket, çevreyi koruma konusunda toplumu bilgilendirici etkinlikler düzenlemeli.",
-        "Eğitim ve mesleki beceri geliştirme programları yerel halka sunulmalı.",
-        "Çalışanlar için insan hakları ve ayrımcılık karşıtı eğitimler yapılmalı.",
-        "İş yerinde mobbing ve taciz önleyici eğitimler sunmalı ve politikalar geliştirilmeli."
+        "Özellikle su yollarının kirletilmesi, su döngüsünde yer alan tüm ekosistemi etkilemektedir. Bu durum su kalitesini, dolayısıyla tarım kalitesini etkiler ve zamanla nehirlerin kurumasına kadar giden kuraklığa sebep olur. Tekstil atıkları su yollarına atılmamalıdır",
+        "Tekstildeki mikroplastik çıktısı azaltılmalı",
+        "Üretim aşamasında fabrikaların su tüketimi ve boya gibi kimyasalların doğaya ne kadar karıştığı denetlenmeli ve daha çevreci kriterler getirilmelidir",
+        "Atık suların arıtılmadan doğaya salınmaması gerekir"
     ],
     [
-        "Yerel üreticiler desteklenmeli, ithalat yerine yerli üretim teşvik edilmeli.",
-        "İş birliği yapılan tedarikçilerin etik kurallara uygunluğu denetlenmeli.",
-        "Şirketler, yerel ekonomiyi destekleyecek projelere yatırım yapmalı.",
-        "Fabrikalar, yerel halka eğitim ve iş olanakları sunmalı."
+        "Aynı beden markadan markaya farklılık gösteriyor. Bunun standartlaştırılması gerekir",
+        "Beden ve üretim standartlarının belirlenmesi için ülke genelinde düzenlemeler yapılmalı; düzenli denetimler ve yüksek cezalarla desteklenmeli",
+        "ZDHC standartlarına uygun ürün kullanılmalı",
+        "Tekstilde üretilen ürünlerin kullanıcı sağlığı göz önüne alınarak üretilmesi"
     ],
     [
-        "Anonim şikayet sistemi kurulmalı ve ücretsiz hukuk danışmanlığı imkanı sunulmalı.",
-        "Paydaşların şikayetlerini dinleme mekanizması.",
-        "Moda markaları, sosyal sorumluluk projelerine dahil olmalı.",
-        "Yatırımcılar, şirketin sosyal sorumluluk projelerine katılımını teşvik etmeli."
+        "Üçüncü taraf bir şirket tarafından yapılan düzenli denetimler, sektörün çalışma, yönetim ve yasal standartlara uymasını sağlayacaktır",
+        "Ürünün bütün akışını gösteren bir takip sistemi, şeffaf biçimde ürünlerin etiketlerine QR kod ile işlenip tüketici ve diğer paydaşların erişimine açılabilir. Bu sayede herkes ürünün hangi aşamalardan geçtiğini bilir ve bilinçle tüketir",
+        "Firma, fabrikada kendi iç denetçisini çalıştırabilir",
+        "Şirketin şeffaf olması ve bunu herkese göstermesi gerekir"
     ],
 ],
 [
     [
-        "Çalışan Refahı",
-        "Adil Maaş ve Yan Haklar",
-        "Mesleki Gelişim ve Destek",
-        "Uygun Fiyatlılık ve Adil Fiyatlandırma"
+        "Faaliyet gösterilen şehirde yerel bir futbol takımı kurmaları veya halihazırdaki takıma sponsor olmaları, yerel toplumdaki sempatiyi kazanmalarını sağlayabilir",
+        "Büyük firmalar kendilerine üretim yapan küçük atölyeleri yok etmek yerine büyümelerini desteklemelidir",
+        "Yerel el sanatlarını ve kültürel mirası (örneğin pamuk işçiliği geleneği) destekleyen sosyal projeler yapmalıdır",
+        "İşe alımlarda, benzer niteliklere sahip adaylar arasından yerelde ikamet edenlere öncelik vermeli"
     ],
     [
-        "Fırsat Eşitliği ve İstihtamın Desteklenmesi",
-        "Sendikal Haklar ve Örgütlenme Özgürlüğü",
-        "STK ile İş Birliği",
-        "Projelerin Toplumla İletişimi"
+        "Sahaya çıkılarak tüketiciye memnuniyet anketleri yapılmalı",
+        "Ürünler üretilirken fabrikanın olduğu bölgedeki halktan fikir alınabilir",
+        "Çalışanlar, yerel topluluklar ve paydaşlarla düzenli iletişim kurmak, sorunların erken fark edilmesini ve sürdürülebilir çözümler üretilmesini sağlar",
+        "Müşteri ile irtibat sağlanmalı, geri bildirim ve memnuniyet dikkate alınmalıdır"
     ],
     [
-        "İş Sağlığı ve Güvenliği",
-        "Ürünlerin Kalitesi ve Standartlara Uygunluğu",
-        "Bağımsız Denetim ve Raporlama",
-        "Kaynakların Verimli Kullanımı ve Yenilikçi Teknolojilere Yatırım"
+        "Toplumsal bilinçlendirme için sivil toplum örgütleriyle iş birliği yapılmalıdır. Giyinme zorunlu bir ihtiyaçtır ve sosyal sorumluluk olarak ihtiyaç sahiplerine destek olmaları gerekir",
+        "Aynı alanda faaliyet gösteren firmalarla dayanışma halinde rekabet sürdürülmeli. Çalışan hakları konusunda ortak değerler yaratılması sağlanmalı vb",
+        "Üniversiteler ve meslek liselerinin ilgili bölümleriyle protokoller hazırlayarak sektöre kalifiye eleman yetiştirilmesi konusunda destek olunmalı",
+        "Sektörel eğitimi desteklemeli, tasarım ve moda okullarına destek vermelidir"
     ],
     [
-        "Tüketici Eğitimi ve Farkındalığı",
-        "Toplumu ve Çalışanları Biliçlendirme Etkinlikleri",
-        "Yerel Ekonomik Destek ve Tedarik Zinciri Sorumlulğu",
-        "Paydaş Katılımının Sağlanması"
+        "Yıkama ve bakım talimatları, su ve enerji tasarrufu sağlayan çevreye duyarlı yöntemleri de kapsayabilir (Örneğin, düşük sıcaklıkta yıkama, doğal deterjan kullanımı vb.)",
+        "Modanın ekolojik ve uzun ömürlü olabileceğini göstermek için moda ve zevk kültürünü teşvik etmek. Örneğin, kıyafetleri birleştirme üzerine atölyeler düzenlemek, bir eşyaya daha uzun süre dayanması için nasıl bakılacağını öğretmek",
+        "Sektör hakkında toplumsal bilinci destekleyici eğitimler ile tüm paydaşlar düzenli olarak bilgilendirilmeli",
+        "Ürünlerin doğru kullanımı için bilgilendirici çalışmalar yapmak"
+    ],
+],
+[
+    [
+        "Çalışan Refahı ve Çalışma Koşulları",
+        "Ürün Kalitesi ve Tüketici Değeri",
+        "Kaynak Yönetimi ve Üretim Verimliliği",
+        "Etik Yönetişim ve İş Ahlakı"
+    ],
+    [
+        "Sosyal Adalet ve Kapsayıcılık",
+        "Döngüsel Ekonomi ve Tüketim Karşıtlığı",
+        "Emek ve Sendika Haklarına Saygı",
+        "Kamu İmajı ve Sosyal İletişim"
+    ],
+    [
+        "İş Sağlığı ve Güvenliği Uyumu",
+        "Çevresel Uyum ve Kirlilik Kontrolü",
+        "Ürün Standartları ve Sertifikalar",
+        "Şeffaflık, Denetim ve Raporlama"
+    ],
+    [
+        "Yerel Toplum ve Ekonomik Ortaklık",
+        "Paydaş Diyaloğu ve Geri Bildirim Mekanizmaları",
+        "Yenilik ve Kalkınma İçin Ortaklıklar",
+        "Tüketici ve Kamu Katılımı"
     ],
 ]]
+
+
+
 
 pairwise_comparisons = [
     [0, 1], [0, 2], [0, 3],
@@ -183,10 +186,14 @@ def create_preference_survey(index, matrix_index):
 
         comparisons = {
             "1- Eşit derecede": 1,
-            "2- Biraz daha önemli": 2,
-            "3- Belirgin derecede önemli": 3,
-            "4- Güçlü derecede daha önemli": 4,
-            "5- Aşırı derecede daha önemli": 5
+            "2- Neredeyse eşit derecede önemli": 2,
+            "3- Biraz daha önemli": 3,
+            "4- Daha fazla önemli": 4,
+            "5- Orta derecede önemli": 5,
+            "6- Belirgin derecede önemli": 6,
+            "7- Güçlü derecede  derecede önemli": 7,
+            "8- Olağanüstü şekilde daha önemli": 8,
+            "9- Aşırı derecede daha önemli": 9
         }
 
         @st.dialog("Önem derecesi")
