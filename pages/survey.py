@@ -176,8 +176,11 @@ pairwise_comparisons = [
 ]
 
 if "results" not in st.session_state:
-    # st.session_state.results = [np.random.randint(1000000, 9999999), ]
-    st.session_state.results = {"userID": np.random.randint(1000000, 9999999)}
+    if "userID" in st.session_state:
+        st.session_state.results = {"userID": st.session_state.userID}
+    else:
+        st.warning("Katılımcı kimliği bulunamadı. Lütfen ana sayfadan başlayın.")
+        st.stop()
 
 def create_preference_survey(index, matrix_index):
     if index < len(pairwise_comparisons):
