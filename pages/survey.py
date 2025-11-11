@@ -193,8 +193,8 @@ def create_preference_survey(index, matrix_index):
             "3- Biraz daha önemli": 3,
             "4- Daha fazla önemli": 4,
             "5- Orta derecede önemli": 5,
-            "6- Belirgin derecede önemli": 6,
-            "7- Güçlü derecede  derecede önemli": 7,
+            "6- Güçlü derecede  derecede önemli": 6,
+            "7- Belirgin derecede önemli": 7,
             "8- Olağanüstü şekilde daha önemli": 8,
             "9- Aşırı derecede daha önemli": 9
         }
