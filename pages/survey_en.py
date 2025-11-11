@@ -270,7 +270,7 @@ if __name__ == "__main__":
             conn = st.connection("gsheets", type=GSheetsConnection)
 
             df1 = conn.read(
-                worksheet="answers"
+                worksheet="cevaplar"
             )
             # Display our Spreadsheet as st.dataframe
             # st.dataframe(df1)
@@ -281,7 +281,7 @@ if __name__ == "__main__":
             df_appended = pd.concat([df1, results_dict], ignore_index=True)
             # st.dataframe(df_appended)
             df = conn.update(
-                    worksheet="answers",
+                    worksheet="cevaplar",
                     data=df_appended,
                 )
             st.success("Your answers has been successfully saved.")
